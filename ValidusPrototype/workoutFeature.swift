@@ -11,7 +11,7 @@ struct workoutFeature: View {
     
     @State private var textWorkout = ""
     
-    let workouts = ["Lunges", "Go for a run", "Burpees", "Goblin Squats", "Sit Ups", "Forearm Plank", "Wall sit", "Jumping Jacks","Side Plank", "Leg Raises", "15 Minute Yoga Session", "Russian Twists"]
+    let workouts = ["Lunges", "Go for a run", "Burpees", "Goblin Squats", "Sit Ups", "Forearm Plank", "Wall sit", "Jumping Jacks","Side Plank", "Leg Raises", "15 Minute Yoga Session", "Russian Twists", "Push Ups"]
     
     var body: some View {
         VStack {
@@ -28,7 +28,7 @@ struct workoutFeature: View {
             
             Button("Generate") {
                 func pickWorkout() -> String {
-                    let random = Int.random(in: 0..<11)
+                    let random = Int.random(in: 0..<12)
                     let workout = workouts[random]
                     //var random = workout[random]                    var workout = workout.randomElement()!
                     return workout
